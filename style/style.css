@@ -1,0 +1,417 @@
+#preloader {
+  display: block;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #DE006F url(http://hello-site.ru//main/images/preloads/spinning-circles.svg) center center no-repeat;
+  background-size: 72px;
+}
+.header {
+  background-color: #ff7da9;
+}
+.header__line {
+  display: flex;
+  align-items: center;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.logo {
+  width: 70px;
+}
+.logo img {
+  max-width: 100%;
+}
+.ds-nav__nav-list {
+  margin-left: 20px;
+}
+.nav-list {
+  display: flex;
+}
+.nav-list__link {
+  padding: 0 10px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.nav-list__link:hover {
+  text-decoration: none;
+}
+.btn-hover-up {
+  position: relative;
+}
+.btn-hover-up::before {
+  content: '';
+  position: absolute;
+  height: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.5s ease;
+}
+.btn-hover-up:hover {
+  color: #fff;
+}
+.btn-hover-up:hover:before {
+  height: 100%;
+}
+.contact {
+  display: flex;
+}
+.contact__link {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding: 0 10px;
+  font-weight: bold;
+}
+.contact__link svg {
+  margin-right: 10px;
+  display: block;
+  font-size: 21px;
+}
+.contact__link .fa-phone {
+  transform: rotate(106deg);
+}
+.contact__link:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.lang {
+  display: flex;
+  align-items: center;
+}
+.lang__link {
+  padding: 10px;
+  cursor: pointer;
+}
+.lang__link:first-child {
+  display: block;
+}
+.lang__link img {
+  max-width: 100%;
+}
+.background-image {
+  background-image: url(../pictures/1.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-size: cover;
+  background-color: #FF69B4;
+}
+.background-text {
+  width: 35vw;
+  padding: 120px 0;
+}
+.background-text {
+  width: 35vw;
+  padding: 120px 0;
+}
+#menuToggle {
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+#menuToggle a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+#menuToggle a:hover {
+  color: #DE006F;
+}
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  /* hide this */
+  z-index: 2;
+  /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #fff;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: #ff7da9;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+/**********************/
+.mobileNav {
+  display: none;
+}
+.listInWallpaper {
+  color: #ffffff;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (max-width: 700px) {
+  .background-text {
+    width: 90vw;
+  }
+}
+.container {
+  width: 1430px;
+  margin: 0 auto;
+  padding: 0 16px;
+  max-width: 100%;
+}
+.ribbon-background {
+  background-color: #FF69B4;
+}
+.new-ribbon {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  flex-wrap: nowrap;
+}
+.custom-button {
+  font-size: 1.3rem;
+  padding: 15px;
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  color: white;
+  cursor: pointer;
+}
+#myBtn:hover {
+  bottom: 30px;
+  animation-name: arrow;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes arrow {
+  from {
+    bottom: 20px;
+  }
+  to {
+    bottom: 30px;
+  }
+}
+.salesPic {
+  max-width: 100%;
+}
+.image-scale-div {
+  overflow: hidden;
+}
+.image-scale {
+  max-width: 100%;
+  transition: 0.5s ease-in-out;
+}
+.image-scale:hover {
+  transform: scale(1.2);
+  transition: 1s ease-out;
+  cursor: pointer;
+}
+.priceItalic-sale {
+  font-size: 17px;
+  line-height: 26px;
+  font-style: italic;
+  font-weight: 400;
+  text-align: center;
+  color: white;
+}
+.priceItalic {
+  font-size: 17px;
+  line-height: 26px;
+  font-style: italic;
+  font-weight: 400;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+footer {
+  background-color: #DE006F;
+  color: white;
+}
+.custom-container-slick {
+  width: 1430px;
+  margin: 0 auto;
+  padding: 0 48px;
+  max-width: 100%;
+}
+.card {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+@font-face {
+  font-family: "Temporary";
+  src: url("../fonts/Robotocondensed.woff") format("woff");
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  color: #DE006F !important;
+  font-size: 16px;
+  font-family: "Temporary";
+}
+.custom-container {
+  width: 1430px;
+  margin: 0 auto;
+  padding: 0 16px;
+  max-width: 100%;
+}
+.section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.spaces-between-blocks {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.background-image-price {
+  background-image: url(../pictures/test.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #464646;
+}
+.btn-light {
+  background-color: #FF3B9D !important;
+  border-color: #DE006F !important;
+  color: white !important;
+  outline: 0 !important;
+}
+.btn-light:hover {
+  background-color: #DE006F !important;
+  color: white !important;
+  outline: 0 !important;
+  border-color: #DE006F !important;
+}
+.btn-light:active {
+  outline-color: #DE006F !important;
+  border-color: #DE006F !important;
+  box-shadow: 0 0 0 0.2rem rgba(213, 160, 33, 0.5) !important;
+}
+.btn-light:focus {
+  outline-color: #DE006F !important;
+  border-color: #DE006F !important;
+  box-shadow: 0 0 0 0.2rem rgba(213, 160, 33, 0.5) !important;
+}
+@media screen and (max-width: 1024px) {
+  .header__line {
+    flex-direction: row-reverse;
+  }
+  .header {
+    padding: 7px 0;
+  }
+  .new-ribbon {
+    flex-wrap: wrap;
+  }
+  .ds-nav {
+    display: none;
+  }
+  .contact {
+    display: none;
+  }
+  .lang {
+    display: none;
+  }
+  .logo {
+    width: 46px;
+  }
+  .mobileNav {
+    display: block;
+    /* overflow-x: hidden; */
+  }
+  .background-text {
+    width: 65vw;
+  }
+}

@@ -1,0 +1,119 @@
+@import "preloader";
+@import "header";
+@import "mixins";
+@import "ribbon";
+@import "body";
+@import "footer";
+@import "slick";
+
+@font-face {
+	font-family: "Temporary";
+	src: url("../fonts/Robotocondensed.woff") format("woff")
+}
+
+@default-text-color: #DE006F;
+
+@section-padding: 50px;
+@blocks-padding: 20px;
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	color: @default-text-color  !important;
+	font-size: 16px;
+	font-family: "Temporary";
+}
+
+.custom-container{
+	.container();
+};
+
+.section {
+	padding-top: @section-padding;
+	padding-bottom: @section-padding;
+}
+
+.spaces-between-blocks {
+	padding-top: @blocks-padding;
+	padding-bottom: @blocks-padding;
+}
+
+.background-image-price {
+	background-image: url(../pictures/test.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #464646;
+}
+
+.btn-light {
+	background-color: #FF3B9D !important;
+	border-color: #DE006F !important;
+	color: white !important;
+	outline: 0 !important;
+}
+
+.btn-light:hover {
+	background-color: #DE006F !important;
+	color: white !important;
+	outline: 0 !important;
+	border-color: #DE006F !important;
+}
+
+.btn-light:active {
+	outline-color: #DE006F !important;
+	border-color: #DE006F !important;
+	box-shadow: 0 0 0 0.2rem rgba(213, 160, 33, 0.5) !important
+}
+
+.btn-light:focus {
+	outline-color: #DE006F !important;
+	border-color: #DE006F !important;
+	box-shadow: 0 0 0 0.2rem rgba(213, 160, 33, 0.5) !important
+}
+
+
+
+@media screen and (max-width: 1024px) {
+	.header__line {
+		flex-direction: row-reverse;
+	}
+
+	.header {
+		padding: 7px 0;
+	}
+
+	 .new-ribbon {
+	 	flex-wrap: wrap;
+	 }
+
+	 .ds-nav {
+	 	display: none;
+	 }
+
+	 .contact {
+	 	display: none;
+	 }
+
+	 .lang {
+	 	display: none;
+	 }
+
+	 .logo {
+	 	width: 46px;
+	 }
+
+	 .mobileNav {
+	 	display: block;
+	 	/* overflow-x: hidden; */
+	 }
+
+	 .background-text {
+	 	width: 65vw;
+	 }
+}

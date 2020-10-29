@@ -1,0 +1,64 @@
+#myBtn {
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 30px;
+	z-index: 99;
+	color: white;
+	cursor: pointer;
+}
+
+#myBtn:hover {
+	bottom: 30px;
+	animation-name: arrow;
+	animation-duration: 0.8s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes arrow {
+	from {
+		bottom: 20px;
+	}
+	to {
+		bottom: 30px;
+	}
+}
+
+.salesPic {
+	max-width: 100%;
+}
+
+
+.image-scale-div {
+	overflow: hidden;
+}
+
+.image-scale {
+	max-width: 100%;
+	transition: 0.5s ease-in-out;
+}
+
+.image-scale:hover {
+	transform: scale(1.2);
+	transition: 1s ease-out;
+	cursor: pointer;
+}
+
+.priceItalic-sale {
+	font-size: 17px;
+	line-height: 26px;
+	font-style: italic;
+	font-weight: 400;
+	text-align: center;
+	color: white;
+}
+
+.priceItalic {
+	font-size: 17px;
+	line-height: 26px;
+	font-style: italic;
+	font-weight: 400;
+	text-align: center;
+	color: rgba(255, 255, 255, 0.8);
+}
