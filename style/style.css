@@ -324,9 +324,57 @@ ul {
   margin-left: 2rem;
   margin-right: 2rem;
 }
+.video {
+  position: relative;
+  border-radius: 5px;
+  border-width: 5px;
+  padding: -10px !important;
+}
+.video:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * 5px);
+  left: calc(-1 * 5px);
+  height: calc(100% + 5px * 2);
+  width: calc(100% + 5px * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  border-radius: calc(2 * 5px);
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 footer {
   background-color: #DE006F;
   color: white;
+}
+.footer-nav-list {
+  line-height: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.footer-nav-list:hover {
+  text-decoration: underline;
+  color: white;
+}
+.socials span {
+  margin-right: 10px;
 }
 .custom-container-slick {
   width: 1430px;
@@ -337,6 +385,32 @@ footer {
 .card {
   margin-left: 2rem;
   margin-right: 2rem;
+}
+.priceName {
+  font-size: 18px;
+  color: white;
+  margin-left: 30px;
+}
+.price {
+  color: #FF69B4;
+  font-size: 18px;
+  float: right;
+  margin-right: 30px;
+}
+.priceName:hover {
+  cursor: pointer;
+}
+.priceName:hover .price {
+  color: #FF69B4;
+  outline: 5px dashed pink;
+  box-shadow: 0 0 0 5px #FF69B4;
+  animation: 1s animateBorderThree ease infinite;
+}
+@keyframes animateBorderThree {
+  to {
+    outline-color: #FF69B4;
+    box-shadow: 0 0 0 5px white;
+  }
 }
 @font-face {
   font-family: "Temporary";
@@ -352,6 +426,7 @@ body {
   color: #DE006F !important;
   font-size: 16px;
   font-family: "Temporary";
+  overflow-x: hidden;
 }
 .custom-container {
   width: 1430px;

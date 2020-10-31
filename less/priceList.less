@@ -1,0 +1,31 @@
+@main-color: #FF69B4;
+
+.priceName {
+	font-size: 18px;
+	color: white;
+	margin-left: 30px
+}
+
+.price {
+	color: @main-color;
+	font-size: 18px;
+	float: right;
+	margin-right: 30px;
+}
+
+.priceName:hover {
+	cursor: pointer;
+	.price {
+		color: @main-color;
+		outline: 5px dashed pink;
+		box-shadow: 0 0 0 5px @main-color;
+		animation: 1s animateBorderThree ease infinite;
+	}
+}
+
+@keyframes animateBorderThree {
+	to {
+		outline-color: @main-color;
+		box-shadow: 0 0 0 5px white;
+	}
+}
