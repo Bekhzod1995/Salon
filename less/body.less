@@ -1,5 +1,8 @@
 @import 'mixins';
 @video-width: 5px;
+@bottom-spacing: 25px;
+@big-screen-font-size: 32px;
+@medium-screen-font-size: 24px;
 
 #myBtn {
 	display: none;
@@ -67,16 +70,6 @@
 	color: rgba(255, 255, 255, 0.8);
 }
 
-.custom-cards {
-	box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-		0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-		0 12.5px 10px rgba(0, 0, 0, 0.06),
-		0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-		0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-		0 100px 80px rgba(0, 0, 0, 0.12);
-	.card();
-}
-
 // .rose {
 // 	position: absolute;
 // 	border: 1px solid;
@@ -136,3 +129,74 @@
 	}
 }
 
+@media screen and (max-width: 768px) {
+	// .custom-cards {
+	// 	margin-bottom: @bottom-spacing;
+	// }
+
+	.salesPic {
+		width: 80%;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.longTitle {
+		font-size: @medium-screen-font-size;
+	}
+}
+
+.longTitle {
+	text-align: center;
+	font-weight: bold;
+	font-size: @big-screen-font-size;
+}
+
+.mx-auto {
+	display: flex;
+	justify-content: center;
+	margin-bottom: @bottom-spacing;
+}
+
+.cards-div {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+@media screen and (max-width: 921px) {
+	.cards-div {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.custom-cards {
+		.card(90vw) !important;
+		// margin: 16px @bottom-spacing;
+		margin-bottom: @bottom-spacing + 20px;
+	}
+
+	.preparation {
+		flex-direction: column;
+	}
+
+	.preparation-procedure2 {
+		margin-top: @bottom-spacing !important;
+	}
+
+	.preparation-procedure3 {
+		margin-top: @bottom-spacing !important;
+	}
+}
+
+.custom-cards {
+	.card(28vw);
+}
+
+.preparation-procedure2 {
+	margin-top: 80px;
+}
+
+.preparation-procedure3 {
+	margin-top: 160px;
+}

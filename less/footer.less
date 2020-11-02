@@ -3,7 +3,7 @@ footer {
 	color: white;
 }
 
-.footer-nav-list{
+.footer-nav-list {
 	line-height: 30px;
 	color: #fff;
 	text-transform: uppercase;
@@ -15,13 +15,22 @@ footer {
 	position: relative;
 }
 
-.footer-nav-list:hover{
+.footer-nav-list:hover {
 	text-decoration: underline;
 	color: white;
 }
 
 .socials {
+	display: inline-block;
 	span {
 		margin-right: 10px;
+	}
+
+	a:hover {
+		position: relative;
+		top: -5px;
+		transition: 0.8 ease-in-out;
+		box-shadow: 0 8px 6px -6px white !important;
+		// transform: translateY(-5px) !important;
 	}
 }

@@ -1,14 +1,14 @@
 AOS.init();
-const mybutton = document.getElementById("myBtn");
-window.onscroll = function () { scrollFunction() };
+// const mybutton = document.getElementById("myBtn");
+// window.onscroll = function () { scrollFunction() };
 
-function scrollFunction() {
-	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-		mybutton.style.display = "block";
-	} else {
-		mybutton.style.display = "none";
-	}
-}
+// function scrollFunction() {
+// 	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+// 		mybutton.style.display = "block";
+// 	} else {
+// 		mybutton.style.display = "none";
+// 	}
+// }
 
 function topFunction() {
 	document.body.scrollTop = 0;
@@ -25,7 +25,7 @@ $('.autoplay').slick({
 	autoplay: true,
 	autoplaySpeed: 2000,
 	centerMode: true,
-	centerPadding: '60px',
+	// centerPadding: '60px',
 	slidesToShow: 3,
 	responsive: [
 		{
@@ -33,7 +33,7 @@ $('.autoplay').slick({
 			settings: {
 				arrows: false,
 				centerMode: true,
-				centerPadding: '40px',
+				// centerPadding: '40px',
 				slidesToShow: 3
 			}
 		},
@@ -42,7 +42,7 @@ $('.autoplay').slick({
 			settings: {
 				arrows: false,
 				centerMode: true,
-				centerPadding: '40px',
+				// centerPadding: '40px',
 				slidesToShow: 1
 			}
 		}

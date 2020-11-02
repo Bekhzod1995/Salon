@@ -2,21 +2,22 @@
 
 .priceName {
 	font-size: 18px;
-	color: white;
-	margin-left: 30px
+	color: @main-color;
+	margin-left: 30px;
 }
 
 .price {
-	color: @main-color;
+	color: white;
 	font-size: 18px;
 	float: right;
-	margin-right: 30px;
+	margin-left: 5vw;
+	font-weight: bold;
 }
 
 .priceName:hover {
 	cursor: pointer;
 	.price {
-		color: @main-color;
+		color: white;
 		outline: 5px dashed pink;
 		box-shadow: 0 0 0 5px @main-color;
 		animation: 1s animateBorderThree ease infinite;
@@ -27,5 +28,17 @@
 	to {
 		outline-color: @main-color;
 		box-shadow: 0 0 0 5px white;
+		color: @main-color;
+	}
+}
+
+.laserPrices {
+	display: flex;
+	justify-content: space-between;
+}
+
+@media screen and (max-width: 921px) {
+	.laserPrices {
+		flex-direction: column;
 	}
 }

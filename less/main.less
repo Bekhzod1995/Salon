@@ -31,9 +31,11 @@ body {
 	overflow-x: hidden;
 }
 
-.custom-container{
+.custom-container {
 	.container();
-};
+}
+
+;
 
 .section {
 	padding-top: @section-padding;
@@ -80,42 +82,8 @@ body {
 }
 
 
-
 @media screen and (max-width: 1024px) {
-	.header__line {
-		flex-direction: row-reverse;
+	.new-ribbon {
+		flex-wrap: wrap;
 	}
-
-	.header {
-		padding: 7px 0;
-	}
-
-	 .new-ribbon {
-	 	flex-wrap: wrap;
-	 }
-
-	 .ds-nav {
-	 	display: none;
-	 }
-
-	 .contact {
-	 	display: none;
-	 }
-
-	 .lang {
-	 	display: none;
-	 }
-
-	 .logo {
-	 	width: 46px;
-	 }
-
-	 .mobileNav {
-	 	display: block;
-	 	/* overflow-x: hidden; */
-	 }
-
-	 .background-text {
-	 	width: 65vw;
-	 }
 }
