@@ -20,6 +20,10 @@
 	animation-duration: 0.8s;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
+	-webkit-animation-name: arrow;
+	-webkit-animation-duration: 0.8s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease-in-out;
 }
 
 @keyframes arrow {
@@ -44,12 +48,15 @@
 .image-scale {
 	max-width: 100%;
 	transition: 0.5s ease-in-out;
+	-webkit-transition: 0.5s ease-in-out;
 }
 
 .image-scale:hover {
 	transform: scale(1.2);
 	transition: 1s ease-out;
 	cursor: pointer;
+	-webkit-transform: scale(1.2);
+	-webkit-transition: 1s ease-out;
 }
 
 .priceItalic-sale {
@@ -112,6 +119,7 @@
 	z-index: -1;
 	animation: animatedgradient 3s ease alternate infinite;
 	background-size: 300% 300%;
+	-webkit-animation: animatedgradient 3s ease alternate infinite;
 }
 
 
@@ -130,10 +138,6 @@
 }
 
 @media screen and (max-width: 768px) {
-	// .custom-cards {
-	// 	margin-bottom: @bottom-spacing;
-	// }
-
 	.salesPic {
 		width: 80%;
 	}
@@ -172,7 +176,6 @@
 
 	.custom-cards {
 		.card(90vw) !important;
-		// margin: 16px @bottom-spacing;
 		margin-bottom: @bottom-spacing + 20px;
 	}
 

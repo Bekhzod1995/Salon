@@ -52,6 +52,7 @@ ul {
   letter-spacing: 0.02em;
   transition: all 0.3s ease;
   position: relative;
+  -webkit-transition: all 0.3s ease;
 }
 .nav-list__link:hover {
   text-decoration: none;
@@ -69,6 +70,7 @@ ul {
   background-color: #FFF;
   visibility: hidden;
   transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
 }
 .btn-hover-up:hover:before {
   visibility: visible;
@@ -95,6 +97,7 @@ ul {
 }
 .contact__link .fa-phone {
   transform: rotate(106deg);
+  -webkit-transform: rotate(106deg);
 }
 .contact__link:hover {
   color: #fff;
@@ -118,7 +121,6 @@ ul {
   background-image: url(../pictures/1.jpg);
   background-position: center center;
   background-repeat: no-repeat;
-  /* background-attachment: fixed; */
   background-size: cover;
   background-color: #FF69B4;
 }
@@ -143,6 +145,7 @@ ul {
   text-decoration: none;
   color: white;
   transition: color 0.3s ease;
+  -webkit-transition: color 0.3s ease;
 }
 #menuToggle a:hover {
   color: #DE006F;
@@ -175,12 +178,16 @@ ul {
   z-index: 1;
   transform-origin: 4px 0px;
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  -webkit-transform-origin: 4px 0px;
+  -webkit-transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
 #menuToggle span:first-child {
   transform-origin: 0% 0%;
+  -webkit-transform-origin: 0% 0%;
 }
 #menuToggle span:nth-last-child(2) {
   transform-origin: 0% 100%;
+  -webkit-transform-origin: 0% 100%;
 }
 /* 
  * Transform all the slices of hamburger
@@ -190,6 +197,7 @@ ul {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #232323;
+  -webkit-transform: rotate(45deg) translate(-2px, -1px);
 }
 /*
  * But let's hide the middle one.
@@ -197,12 +205,14 @@ ul {
 #menuToggle input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
+  -webkit-transform: rotate(0deg) scale(0.2, 0.2);
 }
 /*
  * Ohyeah and the last one should go the other direction
  */
 #menuToggle input:checked ~ span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
+  -webkit-transform: rotate(-45deg) translate(0, -1px);
 }
 /*
  * Make this absolute positioned
@@ -221,6 +231,9 @@ ul {
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  -webkit-transform-origin: 0% 0%;
+  -webkit-transform: translate(-100%, 0);
+  -webkit-transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 #menu li {
   padding: 10px 0;
@@ -231,6 +244,7 @@ ul {
  */
 #menuToggle input:checked ~ ul {
   transform: none;
+  -webkit-transform: none;
 }
 /**********************/
 .mobileNav {
@@ -317,6 +331,10 @@ ul {
   animation-duration: 0.8s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
+  -webkit-animation-name: arrow;
+  -webkit-animation-duration: 0.8s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
 }
 @keyframes arrow {
   from {
@@ -335,11 +353,14 @@ ul {
 .image-scale {
   max-width: 100%;
   transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
 }
 .image-scale:hover {
   transform: scale(1.2);
   transition: 1s ease-out;
   cursor: pointer;
+  -webkit-transform: scale(1.2);
+  -webkit-transition: 1s ease-out;
 }
 .priceItalic-sale {
   font-size: 17px;
@@ -375,6 +396,7 @@ ul {
   z-index: -1;
   animation: animatedgradient 3s ease alternate infinite;
   background-size: 300% 300%;
+  -webkit-animation: animatedgradient 3s ease alternate infinite;
 }
 @keyframes animatedgradient {
   0% {
@@ -462,6 +484,7 @@ footer {
   letter-spacing: 0.02em;
   transition: all 0.3s ease;
   position: relative;
+  -webkit-transition: all 0.3s ease;
 }
 .footer-nav-list:hover {
   text-decoration: underline;
@@ -478,6 +501,7 @@ footer {
   top: -5px;
   transition: 0.2s ease-in-out;
   box-shadow: 0 8px 6px -6px white !important;
+  -webkit-transition: 0.2s ease-in-out;
 }
 .custom-container-slick {
   width: 1430px;
@@ -509,6 +533,7 @@ footer {
   outline: 5px dashed pink;
   box-shadow: 0 0 0 5px #FF69B4;
   animation: 1s animateBorderThree ease infinite;
+  -webkit-animation: 1s animateBorderThree ease infinite;
 }
 @keyframes animateBorderThree {
   to {
@@ -573,7 +598,6 @@ body {
   background-color: #DE006F !important;
   color: white !important;
   outline: 0 !important;
-  border-color: #DE006F !important;
 }
 .btn-light:active {
   outline-color: #DE006F !important;
