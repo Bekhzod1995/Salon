@@ -118,7 +118,7 @@ ul {
   max-width: 100%;
 }
 .background-image {
-  background-image: url(../pictures/1.jpg);
+  background-image: url(../pictures/test.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -345,13 +345,14 @@ ul {
   }
 }
 .salesPic {
-  max-width: 100%;
+  height: 490px;
+  width: 350px;
 }
 .image-scale-div {
   overflow: hidden;
+  width: 350px;
 }
 .image-scale {
-  max-width: 100%;
   transition: 0.5s ease-in-out;
   -webkit-transition: 0.5s ease-in-out;
 }
@@ -412,11 +413,19 @@ ul {
 @media screen and (max-width: 768px) {
   .salesPic {
     width: 80%;
+    height: 400px;
   }
 }
 @media screen and (max-width: 1200px) {
   .longTitle {
     font-size: 24px;
+  }
+  .salesPic {
+    width: 270px;
+    height: 400px;
+  }
+  .image-scale-div {
+    width: 270px;
   }
 }
 .longTitle {
@@ -449,6 +458,22 @@ ul {
   }
   .preparation-procedure3 {
     margin-top: 25px !important;
+  }
+  .salesPic {
+    width: 200px;
+    height: 320px;
+  }
+  .image-scale-div {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .salesPic {
+    width: 350px;
+    height: 470px;
+  }
+  .image-scale-div {
+    width: 350px;
   }
 }
 .custom-cards {
@@ -577,7 +602,7 @@ body {
   padding-bottom: 20px;
 }
 .background-image-price {
-  background-image: url(../pictures/test.jpg);
+  background-image: url(../pictures/rose2.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
