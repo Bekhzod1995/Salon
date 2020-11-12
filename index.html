@@ -10,7 +10,7 @@
 
 	<link rel="stylesheet" type="text/css" href="./slick/slick.css" />
 	<link rel="stylesheet" type="text/css" href="./slick/slick-theme.css" />
-	<link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+	<!-- <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet"> -->
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<!-- custom styles&js -->
 	<link rel="stylesheet" href="./style/style.css">
@@ -20,7 +20,11 @@
 </head>
 
 <body>
-	<div id="preloader"></div>
+	<!-- <div id="preloader"></div> -->
+	<!-- <p id="preloader-text"></p> -->
+	<div id="test">
+		<p id="h1" data-text="EPILBEAUTY">EPILBEAUTY</p>
+	</div>
 	<!-- <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> -->
 	<span onclick="topFunction()" id="myBtn" title="Go to top"><img src="./pictures/up-arrow.svg" width="48"
 			alt=""></span>
@@ -201,10 +205,10 @@
 				<div class="spaces-between-blocks" style="text-align: center;">
 					<div>
 						 <div class="video">
-							<!-- <video width="1400" height="650" controls>
+							<video id="video1" controls>
 								<source src="./video/video.mp4" type="video/mp4">
 								Your browser does not support the video tag.
-							</video> -->
+							</video>
 						</div>
 					</div>
 				</div>
@@ -408,12 +412,11 @@
 				ВОСК И ШУГАРИН
 			</h1>
 			<div class="spaces-between-blocks" style="text-align: center;">
-				<!-- <img src="./pictures/rose2.png" alt="rose" class="rose">-->
-				<!-- <video width="800" height="600" controls>
+				<video id="video2" controls>
 							<source src="./video/Waxing.mp4" type="video/mp4">
 							 <source src="movie.ogg" type="video/ogg"> 
 							Your browser does not support the video tag.
-						</video> -->
+						</video>
 
 			</div>
 		</div>
@@ -699,10 +702,10 @@
 		</div>
 	</footer>
 	<script>
-		var hamburger = document.querySelector(".hamburger");
-		hamburger.addEventListener("click", function () {
-			hamburger.classList.toggle("is-active");
-		});
+		// var hamburger = document.querySelector(".hamburger");
+		// hamburger.addEventListener("click", function () {
+		// 	hamburger.classList.toggle("is-active");
+		// });
 	</script>
 	<script src="./js/slim.min.js"></script>
 	<script src="./js/popper.min.js"></script>

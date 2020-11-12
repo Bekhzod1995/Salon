@@ -9,6 +9,48 @@
   background: #DE006F url(http://hello-site.ru//main/images/preloads/spinning-circles.svg) center center no-repeat;
   background-size: 72px;
 }
+#test {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #DE006F;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#h1 {
+  position: relative;
+  font-size: 8rem !important;
+  color: #222;
+  text-decoration: uppercase;
+  border-bottom: 16px solid #222;
+  letter-spacing: 0.05em;
+  line-height: 1.2em;
+}
+#h1:before {
+  word-wrap: initial;
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: white !important;
+  overflow: hidden;
+  border-bottom: 16px solid white !important;
+  animation: animate 3s linear infinite;
+}
+@keyframes animate {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
 .header {
   background-color: #ff7da9;
 }
@@ -379,26 +421,6 @@ ul {
   text-align: center;
   color: rgba(255, 255, 255, 0.8);
 }
-.video {
-  position: relative;
-  border-radius: 5px;
-  border-width: 5px;
-  padding: -10px !important;
-}
-.video:after {
-  content: '';
-  position: absolute;
-  top: calc(-1 * 5px);
-  left: calc(-1 * 5px);
-  height: calc(100% + 5px * 2);
-  width: calc(100% + 5px * 2);
-  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
-  border-radius: calc(2 * 5px);
-  z-index: -1;
-  animation: animatedgradient 3s ease alternate infinite;
-  background-size: 300% 300%;
-  -webkit-animation: animatedgradient 3s ease alternate infinite;
-}
 @keyframes animatedgradient {
   0% {
     background-position: 0% 50%;
@@ -477,9 +499,25 @@ ul {
   }
 }
 .custom-cards {
-  width: 23vw;
+  width: 17vw;
   padding: 20px;
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+}
+@media screen and (max-width: 2100px) {
+  .custom-cards {
+    position: relative;
+    width: 20vw;
+    padding: 20px;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+  }
+}
+@media screen and (max-width: 1900px) {
+  .custom-cards {
+    position: relative;
+    width: 23vw;
+    padding: 20px;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+  }
 }
 .preparation-procedure2 {
   margin-top: 80px;
@@ -547,18 +585,26 @@ footer {
 }
 .priceName:hover {
   cursor: pointer;
-}
-.priceName:hover .price {
   color: white;
   outline: 5px dashed pink;
   box-shadow: 0 0 0 5px #FF69B4;
   animation: 1s animateBorderThree ease infinite;
   -webkit-animation: 1s animateBorderThree ease infinite;
 }
+.priceName:hover .price {
+  color: white;
+  animation: 1s animateBorderThreePrice ease infinite;
+  -webkit-animation: 1s animateBorderThreePrice ease infinite;
+}
 @keyframes animateBorderThree {
   to {
     outline-color: #FF69B4;
     box-shadow: 0 0 0 5px white;
+    color: #FF69B4;
+  }
+}
+@keyframes animateBorderThreePrice {
+  to {
     color: #FF69B4;
   }
 }
@@ -633,4 +679,8 @@ body {
   .new-ribbon {
     flex-wrap: wrap;
   }
+}
+video {
+  width: 100% !important;
+  height: auto !important;
 }

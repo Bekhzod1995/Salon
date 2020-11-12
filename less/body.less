@@ -104,27 +104,27 @@
 //   0 32px 16px rgba(0, 0, 0, 0.09);
 // }
 
-.video {
-	position: relative;
-	border-radius: @video-width;
-	border-width: @video-width;
-	padding: -10px !important;
-}
+// .video {
+// 	position: relative;
+// 	border-radius: @video-width;
+// 	border-width: @video-width;
+// 	padding: -10px !important;
+// }
 
-.video:after {
-	content: '';
-	position: absolute;
-	top: calc(-1 * @video-width);
-	left: calc(-1 * @video-width);
-	height: calc(100% + @video-width * 2);
-	width: calc(100% + @video-width * 2);
-	background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
-	border-radius: calc(2 * @video-width);
-	z-index: -1;
-	animation: animatedgradient 3s ease alternate infinite;
-	background-size: 300% 300%;
-	-webkit-animation: animatedgradient 3s ease alternate infinite;
-}
+// .video:after {
+// 	content: '';
+// 	position: absolute;
+// 	top: calc(-1 * @video-width);
+// 	left: calc(-1 * @video-width);
+// 	height: calc(100% + @video-width * 2);
+// 	width: calc(100% + @video-width * 2);
+// 	background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+// 	border-radius: calc(2 * @video-width);
+// 	z-index: -1;
+// 	animation: animatedgradient 3s ease alternate infinite;
+// 	background-size: 300% 300%;
+// 	-webkit-animation: animatedgradient 3s ease alternate infinite;
+// }
 
 
 @keyframes animatedgradient {
@@ -222,7 +222,20 @@
 }
 
 .custom-cards {
-	.card(23vw);
+	.card(17vw);
+}
+
+@media screen and (max-width: 2100px){
+	.custom-cards {
+		position: relative;
+		.card(20vw);
+	}
+}
+@media screen and (max-width: 1900px){
+	.custom-cards {
+		position: relative;
+		.card(23vw);
+	}
 }
 
 .preparation-procedure2 {

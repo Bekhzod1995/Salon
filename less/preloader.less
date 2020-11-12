@@ -11,3 +11,50 @@
 	background: @text-color url(http://hello-site.ru//main/images/preloads/spinning-circles.svg) center center no-repeat;
 	background-size: 72px;
 }
+
+#test {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: @text-color;
+	position: fixed;
+	z-index: 99999;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#h1 {
+	position: relative;
+	font-size: 8rem !important;
+	color: #222;
+	text-decoration: uppercase;
+	border-bottom: 16px solid #222;
+	letter-spacing: 0.05em;
+	line-height: 1.2em;
+}
+
+#h1:before {
+	word-wrap: initial;
+	content: attr(data-text);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	color: white !important;
+	overflow: hidden;
+	border-bottom: 16px solid white !important;
+	animation: animate 3s linear infinite;
+}
+
+@keyframes animate {
+	0% {
+		width: 0;
+	}
+
+	100% {
+		width: 100%;
+	}
+}
